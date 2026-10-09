@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -100,6 +100,11 @@
             bindings = <&mkp MB5>;
             key-positions = <26 27>;
         };
+
+        henkan {
+            bindings = <&kp F13>;
+            key-positions = <1 2>;
+        };
     };
 
     behaviors {
@@ -123,10 +128,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W   &kp E    &kp R      &kp T                                                               &kp Y             &kp U  &kp I            &kp O                     &kp P
-&mt LEFT_SHIFT A  &kp S   &kp D    &kp F      &kp G                                                               &kp H             &kp J  &lt 5 K          &kp L                     &mt PLUS MINUS
-&mt LEFT_SHIFT Z  &kp X   &kp C    &mt V TAB  &kp B                                                               &kp N             &kp M  &mt COLON COMMA  &mt DOUBLE_QUOTES PERIOD  &mt EQUAL SLASH
-&trans            &trans  &kp F13  &trans     &mt LEFT_GUI ENTER  &lt 1 INTERNATIONAL_5    &lt 2 INTERNATIONAL_5  &mt ESCAPE SPACE         &lt 6 RIGHT_ALT  &trans                    &trans
+&kp Q             &kp W   &kp E    &kp R      &kp T                                                               &kp Y             &kp U  &kp I            &kp O            &kp P
+&mt LEFT_SHIFT A  &kp S   &kp D    &kp F      &kp G                                                               &kp H             &kp J  &lt 5 K          &kp L            &mt PLUS MINUS
+&mt LEFT_SHIFT Z  &kp X   &kp C    &mt V TAB  &kp B                                                               &kp N             &kp M  &mt COLON COMMA  &mt APOS PERIOD  &mt EQUAL SLASH
+&trans            &trans  &kp F13  &trans     &mt LEFT_GUI ENTER  &lt 1 INTERNATIONAL_5    &lt 2 INTERNATIONAL_5  &mt ESCAPE SPACE         &lt 6 RIGHT_ALT  &trans           &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -136,10 +141,10 @@
 
         MOUSE {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                           &kp NUMBER_6  &kp N7    &kp N8    &kp N9    &kp N0
-&trans        &trans        &trans        &trans        &trans                           &trans        &trans    &mkp MB2  &trans    &trans
-&trans        &trans        &trans        &trans        &trans                           &trans        &mkp MB1  &trans    &kp APOS  &trans
-&trans        &trans        &trans        &trans        &trans  &trans    &kp BACKSPACE  &trans                  &trans    &trans    &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                           &kp NUMBER_6  &kp N7    &kp N8    &kp N9  &kp N0
+&trans        &trans        &trans        &trans        &trans                           &trans        &trans    &trans    &trans  &trans
+&trans        &trans        &trans        &trans        &trans                           &trans        &mkp MB1  &mkp MB2  &trans  &trans
+&trans        &trans        &trans        &trans        &trans  &trans    &kp BACKSPACE  &trans                  &trans    &trans  &trans
             >;
         };
 
